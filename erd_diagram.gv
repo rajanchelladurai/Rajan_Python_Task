@@ -1,0 +1,14 @@
+
+      graph {
+         graph [rankdir=LR];
+         node [label="\N",
+             shape=plaintext
+         ];
+         edge [color=gray50,
+             minlen=2,
+             style=dashed
+         ];
+      
+"items" [label=<<FONT FACE="Helvetica"><TABLE BORDER="0" CELLBORDER="1" CELLPADDING="4" CELLSPACING="0"><TR><TD><B><FONT POINT-SIZE="16">items</FONT></B></TD></TR><TR><TD ALIGN="LEFT" PORT="id"><u><FONT>id</FONT></u> <FONT> [INTEGER]</FONT></TD></TR><TR><TD ALIGN="LEFT" PORT="name"><FONT>name</FONT> <FONT> [TEXT]</FONT> NOT NULL</TD></TR><TR><TD ALIGN="LEFT" PORT="place"><FONT>place</FONT> <FONT> [TEXT]</FONT></TD></TR></TABLE></FONT>>];
+
+}

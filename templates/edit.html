@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>{{msg}}</h3>
+<h1>Edit Item</h1>
+<form method="POST">
+    <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text"  class="form-control" name="name" id="name" value="{{ item[1] }}" required>
+    </div>
+
+    <br>
+    <div class="form-group">
+    <label for="place">Place :</label>
+    <textarea name="place" class="form-control" id="place">{{ item[2] }}</textarea>
+    </div>
+    <div class="form-group">
+    <label for="role">Role :</label>
+    <textarea name="role" class="form-control" id="role">{{ item[3] }}</textarea>
+    </div>
+    <br>
+    <button type="submit">Update</button>
+</form>
+<a href="{{ url_for('index') }}">Back to List</a>
+{% endblock %}
