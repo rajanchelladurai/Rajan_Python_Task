@@ -44,9 +44,7 @@ def index():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM items")
     items = cursor.fetchall()
-
     conn.close()
-
     return render_template('index.html', items=items , names=items[1], values=items[0])
 
 
