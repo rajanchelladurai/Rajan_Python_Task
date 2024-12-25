@@ -2,30 +2,104 @@
 
 {% block content %}
 
+	<style>
+	    table tr th {
+        font-size:14px;
+    }
+    table tr td {
+        font-size:14px;
+    }
+		.header {
+		  overflow: hidden;
+		  padding:3px 12px;
+		  background-color:brown;
+		  box-shadow:0px 2px 12px 0px rgba(0,0,0,0.9);
+		}
+		.header a {
+		  float: left;
+		  color:white;
+		  text-align: center;
+		  padding: 2px 19px;
+		  text-decoration: none;
+		  font-family: Arial, Helvetica, sans-serif;
+		  font-weight:bold;
+		  font-size: 17px;
+		}
+		.table-heading {
+			margin-left:auto;
+			margin-right:auto;
+			padding:6px;
+		}
+		.table input{
+			border-radius:5px;
+			padding:7px 20px;
+			border-width: 0px;
+		}
 
+		.footer {
+			padding:2px 19px;
+			float:right;
 
+		}
+		.search{
+			background-color:white;
+			padding:3px;
+		  	box-shadow:0px 2px 8px 0px rgba(0,0,0,0.7);
+		}
+		.img-center{
+			text-align:center;
+		}
+		.sticky{
+			position:fixed;
+			top:0;
+			width:100%;
+		}
+		.sticky + .content {
+  			padding-top: 102px;
+		}
+	</style>
 
-<h1>Add Item</h1>
+<body style="padding:0px; margin:0px; background-color:#5ca0ff;">
+<div class="head" id="company_header">
+	<div class="header">
+		<a href="company_sub_menu" class="toggle btn btn-outline-primary"><i class="fas fa-arrow-left"style="font-size:20px"></i></a>
+		<a href="#">Deposite Amount</a>
+	  </div>
 
-
+</div>
 
 <form method="POST">
-<form>
-  <div class="form-group">
-    <label >Name</label>
-    <input type="text" name="name" class="form-control" id="name" placeholder="Enter name">
-  </div>
-  <div class="form-group">
-    <label >Place</label>
-    <input type="text" name="place" class="form-control" id="place" placeholder="place">
-  </div>
+<div class="table" >
 
-  <div class="form-group">
-    <label >Role</label>
-    <input type="text" name="role" class="form-control" id="role" placeholder="Role">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</form>
+	<table class="table-heading">
+		<tr>
+			<th>Name</th>
+			<th><input type="text" name="name" class="form-control" id="name"  placeholder="Enter name"></th>
+		</tr>
+		<tr>
+			<th>Amount 500</th>
+			<th><input type="number" name="amount_20" class="form-control" id="amount_20" value="20" placeholder="Enter amount_20"></th>
+		</tr>
+		<tr>
+			<th>Amount 200</th>
+			<th><input type="number" name="amount_10" class="form-control" id="amount_10" value="10" placeholder="Enter amount_10"></th>
+		</tr>
+		<tr>
+			<th>Amount 100</th>
+			<th><input type="number" name="amount_5" class="form-control" id="amount_5" value="5" placeholder="Enter amount_5"></th>
+		</tr>
+		<tr>
+			<th>Branch</th>
+			<th><input type="text" name="place" class="form-control" id="place" value="5" placeholder=" place of branch"></th>
+		</tr>
+		<tr>
+			<th colspan="2"><input type=submit value="Save" class="btn btn-success"></th>
+		</tr>
+	</table>
+
+	</div></form>
+</body>
+
+
 <a href="{{ url_for('index') }}">Back to List</a>
 {% endblock %}
